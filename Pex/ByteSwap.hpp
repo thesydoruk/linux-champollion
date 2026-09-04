@@ -1,3 +1,4 @@
+#include <cstdint>
 #include <type_traits>
 #include <cassert>
 // These are backported from STL C++23

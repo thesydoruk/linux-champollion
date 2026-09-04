@@ -1,6 +1,7 @@
 #include "FileReader.hpp"
 #include "ByteSwap.hpp"
 
+#include <cstring>
 #include <iostream>
 #include <sstream>
 #include <iomanip>

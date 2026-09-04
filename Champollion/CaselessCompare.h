@@ -1,4 +1,8 @@
 #include <string>
+#ifndef _WIN32
+#include <strings.h>
+#endif
+
 inline int caselessCompare(const char *a, const char *b, size_t len) {
 #ifdef _WIN32
   return _strnicmp(a, b, len);

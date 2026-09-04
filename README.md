@@ -32,9 +32,23 @@ Champollion is a CLI-only program.
 
 ## Build Dependencies
 
-* Boost (installable through vcpkg)
-* CMake
-* A C++17 compiler (for Windows you need at least Visual Studio 2019)
+* Boost (`libboost-program-options-dev` on Debian/Ubuntu, or vcpkg)
+* {fmt} (`libfmt-dev`)
+* CMake 3.15+
+* A C++20 compiler (g++ 13 / clang, or Visual Studio 2019+ on Windows)
+
+### Linux (Debian/Ubuntu)
+
+```bash
+sudo apt-get install -y cmake g++ libboost-program-options-dev libfmt-dev
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build -j
+# binary: build/Champollion/Champollion
+```
+
+Or: `docker build -t linux-champollion .`
+
+This fork is [thesydoruk/linux-champollion](https://github.com/thesydoruk/linux-champollion), based on [Orvid/Champollion](https://github.com/Orvid/Champollion).
 
 ## Copyright
 
